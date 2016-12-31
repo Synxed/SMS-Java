@@ -8,8 +8,7 @@ package Frames;
 import java.awt.Component;
 import javax.swing.JCheckBox;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.text.JTextComponent;
+import javax.swing.*;
 
 /**
  *

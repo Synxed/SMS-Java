@@ -200,32 +200,21 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_AboutLabelMouseClicked
 
     private void OpenButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenButtonMouseClicked
-        URL iconURL = getClass().getResource("/Resources/icon.png");
-        ImageIcon icon = new ImageIcon(iconURL);
-        
         switch(OperationsComboBox.getSelectedIndex()){
             case 0:
-                JFrame employeeRegistrationFrame = new EmployeeRegistrationFrame();
-                employeeRegistrationFrame.setIconImage(icon.getImage());
-                employeeRegistrationFrame.setVisible(true);
+                new EmployeeRegistrationFrame().setVisible(true);
                 break;
                 
             case 1:
-                JFrame projectRegistrationFrame = new ProjectRegistrationFrame();
-                projectRegistrationFrame.setIconImage(icon.getImage());
-                projectRegistrationFrame.setVisible(true);
+                new ProjectRegistrationFrame().setVisible(true);
                 break;
                 
             case 2:
-                JFrame projectAllocationFrame = new ProjectAllocationFrame();
-                projectAllocationFrame.setIconImage(icon.getImage());
-                projectAllocationFrame.setVisible(true);
+                new ProjectAllocationFrame().setVisible(true);
                 break;
                 
             case 3:
-                JFrame trainingAssessmentFrame = new TrainingAssessmentFrame();
-                trainingAssessmentFrame.setIconImage(icon.getImage());
-                trainingAssessmentFrame.setVisible(true);
+                new TrainingAssessmentFrame().setVisible(true);
                 break;               
         }
     }//GEN-LAST:event_OpenButtonMouseClicked
@@ -261,10 +250,7 @@ public class MainFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                JFrame mainFrame = new MainFrame();
-                URL iconURL = getClass().getResource("/Resources/icon.png");
-                mainFrame.setIconImage(new ImageIcon(iconURL).getImage());
-                mainFrame.setVisible(true);               
+                new MainFrame().setVisible(true);            
             }
         });
     }

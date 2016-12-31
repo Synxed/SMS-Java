@@ -5,6 +5,8 @@
  */
 package Frames;
 
+import javax.swing.*;
+
 /**
  *
  * @author Cerberus
@@ -27,14 +29,51 @@ public class AboutFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        DevelopedbyPanel2 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         AboutPanel = new javax.swing.JPanel();
         AboutLabel = new javax.swing.JLabel();
-        DevelopedbyPanel = new javax.swing.JPanel();
-        DevelopedbyLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SMS - About");
         setResizable(false);
+
+        DevelopedbyPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Developed by"));
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"Suman Bhowmick", "1622109", "11500114111"},
+                {"Sujoy Dey", "1622108", "11500114110"},
+                {"Sugata Bera", "1622107", "11500114109"},
+                {"Suchismita Mahato", "1622106", "11500114108"},
+                {"Subir Kumar Hansda", "1622127", "11500114107"}
+            },
+            new String [] {
+                "Full Name", "College Roll", "University Roll"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setPreferredWidth(150);
+            jTable1.getColumnModel().getColumn(1).setPreferredWidth(100);
+            jTable1.getColumnModel().getColumn(2).setPreferredWidth(125);
+        }
+
+        javax.swing.GroupLayout DevelopedbyPanel2Layout = new javax.swing.GroupLayout(DevelopedbyPanel2);
+        DevelopedbyPanel2.setLayout(DevelopedbyPanel2Layout);
+        DevelopedbyPanel2Layout.setHorizontalGroup(
+            DevelopedbyPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(DevelopedbyPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        DevelopedbyPanel2Layout.setVerticalGroup(
+            DevelopedbyPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         AboutPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("About"));
 
@@ -46,7 +85,7 @@ public class AboutFrame extends javax.swing.JFrame {
             AboutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AboutPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(AboutLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+                .addComponent(AboutLabel)
                 .addContainerGap())
         );
         AboutPanelLayout.setVerticalGroup(
@@ -54,43 +93,41 @@ public class AboutFrame extends javax.swing.JFrame {
             .addComponent(AboutLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        DevelopedbyPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Developed by"));
-
-        DevelopedbyLabel.setText("<html>11500114111 - Suman Bhowmick<br> 11500114110 - Sujay Dey<br> 11500114109 - Sugata Bera<br> 11500114108 - Suchismita Mahato<br> 11500114107 - Subir Kumar Hansda</html>");
-
-        javax.swing.GroupLayout DevelopedbyPanelLayout = new javax.swing.GroupLayout(DevelopedbyPanel);
-        DevelopedbyPanel.setLayout(DevelopedbyPanelLayout);
-        DevelopedbyPanelLayout.setHorizontalGroup(
-            DevelopedbyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(DevelopedbyPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(DevelopedbyLabel)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(AboutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(DevelopedbyPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        DevelopedbyPanelLayout.setVerticalGroup(
-            DevelopedbyPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(DevelopedbyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(AboutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(DevelopedbyPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(AboutPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(DevelopedbyPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(AboutPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(DevelopedbyPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -135,6 +172,12 @@ public class AboutFrame extends javax.swing.JFrame {
     private javax.swing.JLabel AboutLabel;
     private javax.swing.JPanel AboutPanel;
     private javax.swing.JLabel DevelopedbyLabel;
+    private javax.swing.JLabel DevelopedbyLabel1;
     private javax.swing.JPanel DevelopedbyPanel;
+    private javax.swing.JPanel DevelopedbyPanel1;
+    private javax.swing.JPanel DevelopedbyPanel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
