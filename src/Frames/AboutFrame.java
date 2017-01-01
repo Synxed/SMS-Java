@@ -66,7 +66,7 @@ public class AboutFrame extends javax.swing.JFrame {
             DevelopedbyPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(DevelopedbyPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
+                .addComponent(jScrollPane1)
                 .addContainerGap())
         );
         DevelopedbyPanel2Layout.setVerticalGroup(
@@ -84,7 +84,7 @@ public class AboutFrame extends javax.swing.JFrame {
             AboutPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AboutPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(AboutLabel)
+                .addComponent(AboutLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 452, Short.MAX_VALUE)
                 .addContainerGap())
         );
         AboutPanelLayout.setVerticalGroup(
