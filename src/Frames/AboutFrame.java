@@ -38,7 +38,6 @@ public class AboutFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SMS - About");
-        setResizable(false);
 
         DevelopedbyPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Developed by"));
 
@@ -159,6 +158,9 @@ public class AboutFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(AboutFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -171,10 +173,6 @@ public class AboutFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AboutLabel;
     private javax.swing.JPanel AboutPanel;
-    private javax.swing.JLabel DevelopedbyLabel;
-    private javax.swing.JLabel DevelopedbyLabel1;
-    private javax.swing.JPanel DevelopedbyPanel;
-    private javax.swing.JPanel DevelopedbyPanel1;
     private javax.swing.JPanel DevelopedbyPanel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

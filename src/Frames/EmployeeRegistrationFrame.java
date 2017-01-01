@@ -32,10 +32,10 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         FieldsPanel = new javax.swing.JPanel();
-        IDTextField = new javax.swing.JTextField();
+        idTextField = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
-        AgeTextField = new javax.swing.JTextField();
-        SalaryTextField = new javax.swing.JTextField();
+        ageTextField = new javax.swing.JTextField();
+        salaryTextField = new javax.swing.JTextField();
         MobileTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -51,8 +51,8 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
-        RegisterButton = new javax.swing.JButton();
-        ResetButton = new javax.swing.JButton();
+        registerButton = new javax.swing.JButton();
+        resetButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SMS - Employee Registration");
@@ -89,9 +89,9 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addGroup(FieldsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(MobileTextField)
-                    .addComponent(SalaryTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(AgeTextField, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(IDTextField)
+                    .addComponent(salaryTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(ageTextField, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(idTextField)
                     .addComponent(SexComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jTextField8, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
@@ -101,7 +101,7 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
             .addGroup(FieldsPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(FieldsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(IDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FieldsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -113,11 +113,11 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
                     .addComponent(SexComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FieldsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AgeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ageTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FieldsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SalaryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(salaryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(FieldsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -177,19 +177,19 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
                 .addComponent(jCheckBox6))
         );
 
-        RegisterButton.setText("Register");
-        RegisterButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        registerButton.setText("Register");
+        registerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        registerButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RegisterButtonMouseClicked(evt);
+                registerButtonMouseClicked(evt);
             }
         });
 
-        ResetButton.setText("Reset");
-        ResetButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ResetButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        resetButton.setText("Reset");
+        resetButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        resetButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ResetButtonMouseClicked(evt);
+                resetButtonMouseClicked(evt);
             }
         });
 
@@ -204,9 +204,9 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(SkillSetPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(RegisterButton)
+                                .addComponent(registerButton)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(ResetButton))))
+                                .addComponent(resetButton))))
                     .addComponent(FieldsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -218,61 +218,46 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
                 .addComponent(SkillSetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegisterButton)
-                    .addComponent(ResetButton))
+                    .addComponent(registerButton)
+                    .addComponent(resetButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ResetButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResetButtonMouseClicked
+    private void resetButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resetButtonMouseClicked
         for (Component component : FieldsPanel.getComponents()){    
             if (component instanceof JTextField){
                 ((JTextComponent) component).setText("");
             }
-        }
-       
-        SexComboBox.setSelectedIndex(0);
-        
+        }    
+        SexComboBox.setSelectedIndex(0);        
         for (Component component : SkillSetPanel.getComponents()){    
-            if (component instanceof JCheckBox){
-                ((JCheckBox) component).setSelected(false);
-            }
-        }
-        
-    }//GEN-LAST:event_ResetButtonMouseClicked
+            if (component instanceof JCheckBox)
+                ((JCheckBox) component).setSelected(false);           
+        }      
+    }//GEN-LAST:event_resetButtonMouseClicked
 
-    private void RegisterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseClicked
+    private void registerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerButtonMouseClicked
         for (Component component : FieldsPanel.getComponents()){    
             if (component instanceof JTextField){
                 if (((JTextComponent) component).getText().equals("")){
                     JOptionPane.showMessageDialog(null, "All data fields have to be filled.", "Error", JOptionPane.WARNING_MESSAGE);
                     return;
-                }
-            }
-        }
-        
-        try{
-            Integer.parseInt(AgeTextField.getText());
-        }
-        catch(NumberFormatException e){
+                }}}        
+        try{ Integer.parseInt(ageTextField.getText());
+        } catch(NumberFormatException e){
             JOptionPane.showMessageDialog(null, "Age has to be an integer value.", "Error", JOptionPane.WARNING_MESSAGE);
                     return;
-        }
-        
-        try{
-            Double.parseDouble(SalaryTextField.getText());
-        }
-        catch(NumberFormatException e){
+        }      
+        try{ Double.parseDouble(salaryTextField.getText());
+        } catch(NumberFormatException e){
             JOptionPane.showMessageDialog(null, "Salary has to be a double value.", "Error", JOptionPane.WARNING_MESSAGE);
                     return;
-        }
-        
-        
-        
-        JOptionPane.showMessageDialog(null, "Employee (" + IDTextField.getText() + ") has been registered successfully.", "Registration Successful", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_RegisterButtonMouseClicked
+        }              
+        JOptionPane.showMessageDialog(null, "Employee (" + idTextField.getText() + ") has been registered successfully.", "Registration Successful", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_registerButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -310,15 +295,12 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField AgeTextField;
     private javax.swing.JPanel FieldsPanel;
-    private javax.swing.JTextField IDTextField;
     private javax.swing.JTextField MobileTextField;
-    private javax.swing.JButton RegisterButton;
-    private javax.swing.JButton ResetButton;
-    private javax.swing.JTextField SalaryTextField;
     private javax.swing.JComboBox<String> SexComboBox;
     private javax.swing.JPanel SkillSetPanel;
+    private javax.swing.JTextField ageTextField;
+    private javax.swing.JTextField idTextField;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -332,5 +314,8 @@ public class EmployeeRegistrationFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JButton registerButton;
+    private javax.swing.JButton resetButton;
+    private javax.swing.JTextField salaryTextField;
     // End of variables declaration//GEN-END:variables
 }

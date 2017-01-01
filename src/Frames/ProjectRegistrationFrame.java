@@ -34,19 +34,19 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        ProjectNameTextField = new javax.swing.JTextField();
+        projectNameTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ProjectDescriptionTextArea = new javax.swing.JTextArea();
-        SkillSetPanel = new javax.swing.JPanel();
+        projectDescriptionTextArea = new javax.swing.JTextArea();
+        requiredSkillsPanel = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
-        RegisterButton = new javax.swing.JButton();
-        ResetButton = new javax.swing.JButton();
+        registerButton = new javax.swing.JButton();
+        resetButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SMS - Project Registration");
@@ -56,11 +56,11 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
 
         jLabel2.setText("Project Description:");
 
-        ProjectDescriptionTextArea.setColumns(20);
-        ProjectDescriptionTextArea.setRows(5);
-        jScrollPane1.setViewportView(ProjectDescriptionTextArea);
+        projectDescriptionTextArea.setColumns(20);
+        projectDescriptionTextArea.setRows(5);
+        jScrollPane1.setViewportView(projectDescriptionTextArea);
 
-        SkillSetPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Required Skills"));
+        requiredSkillsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Required Skills"));
 
         jCheckBox1.setText("PHP");
         jCheckBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -80,11 +80,11 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
         jCheckBox6.setText("Swift");
         jCheckBox6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout SkillSetPanelLayout = new javax.swing.GroupLayout(SkillSetPanel);
-        SkillSetPanel.setLayout(SkillSetPanelLayout);
-        SkillSetPanelLayout.setHorizontalGroup(
-            SkillSetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SkillSetPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout requiredSkillsPanelLayout = new javax.swing.GroupLayout(requiredSkillsPanel);
+        requiredSkillsPanel.setLayout(requiredSkillsPanelLayout);
+        requiredSkillsPanelLayout.setHorizontalGroup(
+            requiredSkillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(requiredSkillsPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jCheckBox1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -99,9 +99,9 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
                 .addComponent(jCheckBox6)
                 .addContainerGap(94, Short.MAX_VALUE))
         );
-        SkillSetPanelLayout.setVerticalGroup(
-            SkillSetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(SkillSetPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        requiredSkillsPanelLayout.setVerticalGroup(
+            requiredSkillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(requiredSkillsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jCheckBox1)
                 .addComponent(jCheckBox2)
                 .addComponent(jCheckBox3)
@@ -110,19 +110,19 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
                 .addComponent(jCheckBox6))
         );
 
-        RegisterButton.setText("Register");
-        RegisterButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        RegisterButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        registerButton.setText("Register");
+        registerButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        registerButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                RegisterButtonMouseClicked(evt);
+                registerButtonMouseClicked(evt);
             }
         });
 
-        ResetButton.setText("Reset");
-        ResetButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ResetButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        resetButton.setText("Reset");
+        resetButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        resetButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ResetButtonMouseClicked(evt);
+                resetButtonMouseClicked(evt);
             }
         });
 
@@ -136,16 +136,16 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(ProjectNameTextField))
+                        .addComponent(projectNameTextField))
                     .addComponent(jScrollPane1)
-                    .addComponent(SkillSetPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(requiredSkillsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(RegisterButton)
+                        .addComponent(registerButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(ResetButton)))
+                        .addComponent(resetButton)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -154,17 +154,17 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(ProjectNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(projectNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(SkillSetPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(requiredSkillsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegisterButton)
-                    .addComponent(ResetButton))
+                    .addComponent(registerButton)
+                    .addComponent(resetButton))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -188,40 +188,34 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ResetButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResetButtonMouseClicked
-        ProjectNameTextField.setText("");
-        ProjectDescriptionTextArea.setText("");       
-        
-        for (Component component : SkillSetPanel.getComponents()){    
-            if (component instanceof JCheckBox){
+    private void resetButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resetButtonMouseClicked
+        projectNameTextField.setText("");
+        projectDescriptionTextArea.setText("");           
+        for (Component component : requiredSkillsPanel.getComponents())    
+            if (component instanceof JCheckBox)
                 ((JCheckBox) component).setSelected(false);
-            }
-        }
-    }//GEN-LAST:event_ResetButtonMouseClicked
+    }//GEN-LAST:event_resetButtonMouseClicked
 
-    private void RegisterButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterButtonMouseClicked
-        if(ProjectNameTextField.getText().equals("") || ProjectDescriptionTextArea.getText().equals("")){
+    private void registerButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerButtonMouseClicked
+        if(projectNameTextField.getText().equals("") || projectDescriptionTextArea.getText().equals("")){
             JOptionPane.showMessageDialog(null, "All fields must be filled.", "Error", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        boolean skillSelected = false;
-        
-        for (Component component : SkillSetPanel.getComponents()){    
+        boolean skillSelected = false;     
+        for (Component component : requiredSkillsPanel.getComponents()){    
             if (component instanceof JCheckBox){
                 if(((JCheckBox) component).isSelected()){
                     skillSelected = true;
                     break;
                 }                    
             }
-        }
-        
+        }       
         if(!skillSelected){
             JOptionPane.showMessageDialog(null, "At least one skill has to be selected.", "Error", JOptionPane.WARNING_MESSAGE);
             return;
-        }
-        
+        }        
         JOptionPane.showMessageDialog(null, "Project has been successfully registered.", "Registration Successful", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_RegisterButtonMouseClicked
+    }//GEN-LAST:event_registerButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -259,11 +253,6 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextArea ProjectDescriptionTextArea;
-    private javax.swing.JTextField ProjectNameTextField;
-    private javax.swing.JButton RegisterButton;
-    private javax.swing.JButton ResetButton;
-    private javax.swing.JPanel SkillSetPanel;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
@@ -274,5 +263,10 @@ public class ProjectRegistrationFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea projectDescriptionTextArea;
+    private javax.swing.JTextField projectNameTextField;
+    private javax.swing.JButton registerButton;
+    private javax.swing.JPanel requiredSkillsPanel;
+    private javax.swing.JButton resetButton;
     // End of variables declaration//GEN-END:variables
 }

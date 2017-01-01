@@ -23,7 +23,7 @@ public class ProjectAllocationFrame extends javax.swing.JFrame {
     public ProjectAllocationFrame() {
         initComponents();
         
-        ProjectDetailsTextPane.setContentType("text/html");
+        projectDetailsTextPane.setContentType("text/html");
     }
 
     /**
@@ -36,37 +36,37 @@ public class ProjectAllocationFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        ProjectComboBox = new javax.swing.JComboBox<>();
-        AllocateButton = new javax.swing.JButton();
-        ExportButton = new javax.swing.JButton();
+        projectComboBox = new javax.swing.JComboBox<>();
+        allocateButton = new javax.swing.JButton();
+        exportButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        ProjectDetailsTextPane = new javax.swing.JTextPane();
+        projectDetailsTextPane = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SMS - Project Allocation");
         setResizable(false);
 
-        ProjectComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Urisoft E-commerce Website Developement", "Apex PHP Web Application Developement" }));
-        ProjectComboBox.setToolTipText("Select Project");
-        ProjectComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        projectComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Urisoft E-commerce Website Developement", "Apex PHP Web Application Developement" }));
+        projectComboBox.setToolTipText("Select Project");
+        projectComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        AllocateButton.setText("Allocate");
-        AllocateButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AllocateButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        allocateButton.setText("Allocate");
+        allocateButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        allocateButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AllocateButtonMouseClicked(evt);
+                allocateButtonMouseClicked(evt);
             }
         });
 
-        ExportButton.setText("Export Report");
-        ExportButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ExportButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        exportButton.setText("Export Report");
+        exportButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exportButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExportButtonMouseClicked(evt);
+                exportButtonMouseClicked(evt);
             }
         });
 
-        jScrollPane1.setViewportView(ProjectDetailsTextPane);
+        jScrollPane1.setViewportView(projectDetailsTextPane);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -77,11 +77,11 @@ public class ProjectAllocationFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(ProjectComboBox, 0, 539, Short.MAX_VALUE)
+                        .addComponent(projectComboBox, 0, 539, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AllocateButton)
+                        .addComponent(allocateButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ExportButton)))
+                        .addComponent(exportButton)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -89,9 +89,9 @@ public class ProjectAllocationFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProjectComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AllocateButton)
-                    .addComponent(ExportButton))
+                    .addComponent(projectComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(allocateButton)
+                    .addComponent(exportButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
                 .addContainerGap())
@@ -179,19 +179,14 @@ public class ProjectAllocationFrame extends javax.swing.JFrame {
 "</ol>\n" +
 "</div>";
     
-    private void AllocateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AllocateButtonMouseClicked
-        switch(ProjectComboBox.getSelectedIndex()){
-            case 0:
-                ProjectDetailsTextPane.setText(firstProject);
-                break;
-                
-            case 1:
-                ProjectDetailsTextPane.setText(secondProject);
-                break;
+    private void allocateButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_allocateButtonMouseClicked
+        switch(projectComboBox.getSelectedIndex()){
+            case 0: projectDetailsTextPane.setText(firstProject); break;              
+            case 1: projectDetailsTextPane.setText(secondProject); break;
         }
-    }//GEN-LAST:event_AllocateButtonMouseClicked
+    }//GEN-LAST:event_allocateButtonMouseClicked
 
-    private void ExportButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExportButtonMouseClicked
+    private void exportButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exportButtonMouseClicked
         JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("HTML Files", "html");
         fileChooser.setFileFilter(filter);
@@ -200,20 +195,18 @@ public class ProjectAllocationFrame extends javax.swing.JFrame {
             try {
                 File file = fileChooser.getSelectedFile();
                 fileWriter = new FileWriter(file.getAbsoluteFile());
-                ProjectDetailsTextPane.write(fileWriter);
+                projectDetailsTextPane.write(fileWriter);
                 JOptionPane.showMessageDialog(null, "Report successfully exported to " + file.getAbsolutePath(), "Export Successful", JOptionPane.INFORMATION_MESSAGE);
             } catch (IOException ex) {
                 Logger.getLogger(ProjectAllocationFrame.class.getName()).log(Level.SEVERE, null, ex);
             } finally {
-                try {
-                    fileWriter.close();
+                try { fileWriter.close();
                 } catch (IOException ex) {
                     Logger.getLogger(ProjectAllocationFrame.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            }
-            
+            }           
         }
-    }//GEN-LAST:event_ExportButtonMouseClicked
+    }//GEN-LAST:event_exportButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -251,11 +244,11 @@ public class ProjectAllocationFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AllocateButton;
-    private javax.swing.JButton ExportButton;
-    private javax.swing.JComboBox<String> ProjectComboBox;
-    private javax.swing.JTextPane ProjectDetailsTextPane;
+    private javax.swing.JButton allocateButton;
+    private javax.swing.JButton exportButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> projectComboBox;
+    private javax.swing.JTextPane projectDetailsTextPane;
     // End of variables declaration//GEN-END:variables
 }

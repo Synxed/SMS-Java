@@ -38,36 +38,36 @@ public class TrainingAssessmentFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        SkillComboBox = new javax.swing.JComboBox<>();
-        AnalyzeButton = new javax.swing.JButton();
-        ExportButton = new javax.swing.JButton();
+        skillComboBox = new javax.swing.JComboBox<>();
+        analyzeButton = new javax.swing.JButton();
+        exportButton = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        EmployeeTable = new javax.swing.JTable();
+        employeeTable = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("SMS - Training Assessment");
         setResizable(false);
 
-        SkillComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PHP", "C#", "C++", "Python", "Java", "Swift" }));
-        SkillComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        skillComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "PHP", "C#", "C++", "Python", "Java", "Swift" }));
+        skillComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        AnalyzeButton.setText("Analyze");
-        AnalyzeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        AnalyzeButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        analyzeButton.setText("Analyze");
+        analyzeButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        analyzeButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                AnalyzeButtonMouseClicked(evt);
+                analyzeButtonMouseClicked(evt);
             }
         });
 
-        ExportButton.setText("Export Report");
-        ExportButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        ExportButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        exportButton.setText("Export Report");
+        exportButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        exportButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                ExportButtonMouseClicked(evt);
+                exportButtonMouseClicked(evt);
             }
         });
 
-        EmployeeTable.setModel(new javax.swing.table.DefaultTableModel(
+        employeeTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -90,12 +90,12 @@ public class TrainingAssessmentFrame extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(EmployeeTable);
-        if (EmployeeTable.getColumnModel().getColumnCount() > 0) {
-            EmployeeTable.getColumnModel().getColumn(0).setPreferredWidth(40);
-            EmployeeTable.getColumnModel().getColumn(1).setPreferredWidth(125);
-            EmployeeTable.getColumnModel().getColumn(2).setPreferredWidth(50);
-            EmployeeTable.getColumnModel().getColumn(3).setPreferredWidth(50);
+        jScrollPane1.setViewportView(employeeTable);
+        if (employeeTable.getColumnModel().getColumnCount() > 0) {
+            employeeTable.getColumnModel().getColumn(0).setPreferredWidth(40);
+            employeeTable.getColumnModel().getColumn(1).setPreferredWidth(125);
+            employeeTable.getColumnModel().getColumn(2).setPreferredWidth(50);
+            employeeTable.getColumnModel().getColumn(3).setPreferredWidth(50);
         }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -107,11 +107,11 @@ public class TrainingAssessmentFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(SkillComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(skillComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(AnalyzeButton)
+                        .addComponent(analyzeButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(ExportButton)))
+                        .addComponent(exportButton)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -119,9 +119,9 @@ public class TrainingAssessmentFrame extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SkillComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AnalyzeButton)
-                    .addComponent(ExportButton))
+                    .addComponent(skillComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(analyzeButton)
+                    .addComponent(exportButton))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -171,41 +171,35 @@ public class TrainingAssessmentFrame extends javax.swing.JFrame {
             "#41555 - Priyanka Kaur (Female, 32) $45,750.00";
                             
     
-    private void AnalyzeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AnalyzeButtonMouseClicked
-        DefaultTableModel defaultTableMode = (DefaultTableModel) EmployeeTable.getModel();
-        defaultTableMode.setRowCount(0);
-        
-        switch(SkillComboBox.getSelectedItem().toString()){
+    private void analyzeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_analyzeButtonMouseClicked
+        DefaultTableModel defaultTableMode = (DefaultTableModel) employeeTable.getModel();
+        defaultTableMode.setRowCount(0); //Reset rows in employeeTable       
+        switch(skillComboBox.getSelectedItem().toString()){
             case "PHP":
                 defaultTableMode.addRow(new Object[]{"#42990","John Doe","Male","29","$78,500.00"});
-                break;
-                
+                break;                
             case "C#":
                 defaultTableMode.addRow(new Object[]{"#42771","Ramanathan Tripathi","Male","34","$65,500.00"});
                 defaultTableMode.addRow(new Object[]{"#43011","Karina Artemova","Female","28","$53,500.00"});
-                break;
-                
+                break;                
             case "C++":
                 defaultTableMode.addRow(new Object[]{"#43344","Kyle Broflovski","Male","22","$56,750.00"});
-                break;
-                
+                break;               
             case "Python":
                 defaultTableMode.addRow(new Object[]{"#41001","Emilia Green","Female","31","$66,000.00"});
-                break;
-                      
+                break;                
             case "Java":
                 defaultTableMode.addRow(new Object[]{"#44002","Miyoko Mizunaki","Female","21","$63,750.00"});
-                break;
-                
+                break;       
             case "Swift":
                 defaultTableMode.addRow(new Object[]{"#41110","Haru Harada","Male","28","$77,000.00"});
                 defaultTableMode.addRow(new Object[]{"#42298","Randy Marsh","Male","39","$118,000.00"});
                 defaultTableMode.addRow(new Object[]{"#41555","Priyanka Kaur","Female","32","$45,750.00"});
                 break;
         }
-    }//GEN-LAST:event_AnalyzeButtonMouseClicked
+    }//GEN-LAST:event_analyzeButtonMouseClicked
 
-    private void ExportButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExportButtonMouseClicked
+    private void exportButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_exportButtonMouseClicked
         JFileChooser fileChooser = new JFileChooser();
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Text Files", "txt");
         fileChooser.setFileFilter(filter);
@@ -226,7 +220,7 @@ public class TrainingAssessmentFrame extends javax.swing.JFrame {
                 }
             }
         }
-    }//GEN-LAST:event_ExportButtonMouseClicked
+    }//GEN-LAST:event_exportButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -254,6 +248,9 @@ public class TrainingAssessmentFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(TrainingAssessmentFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -264,11 +261,11 @@ public class TrainingAssessmentFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton AnalyzeButton;
-    private javax.swing.JTable EmployeeTable;
-    private javax.swing.JButton ExportButton;
-    private javax.swing.JComboBox<String> SkillComboBox;
+    private javax.swing.JButton analyzeButton;
+    private javax.swing.JTable employeeTable;
+    private javax.swing.JButton exportButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> skillComboBox;
     // End of variables declaration//GEN-END:variables
 }

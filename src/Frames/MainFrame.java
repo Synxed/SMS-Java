@@ -33,14 +33,14 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        CredentialPanel = new javax.swing.JPanel();
-        UsernameTextField = new javax.swing.JTextField();
-        PasswordField = new javax.swing.JPasswordField();
-        LoginButton = new javax.swing.JButton();
-        OperationsPanel = new javax.swing.JPanel();
-        OperationsComboBox = new javax.swing.JComboBox<>();
-        OpenButton = new javax.swing.JButton();
-        StatusPanel = new javax.swing.JPanel();
+        loginPanel = new javax.swing.JPanel();
+        usernameTextField = new javax.swing.JTextField();
+        passwordField = new javax.swing.JPasswordField();
+        loginButton = new javax.swing.JButton();
+        operationPanel = new javax.swing.JPanel();
+        operationComboBox = new javax.swing.JComboBox<>();
+        openButton = new javax.swing.JButton();
+        statusPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         AboutLabel = new javax.swing.JLabel();
 
@@ -48,83 +48,83 @@ public class MainFrame extends javax.swing.JFrame {
         setTitle("SMS - Login");
         setResizable(false);
 
-        CredentialPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Admin Login"));
+        loginPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Admin Login"));
 
-        UsernameTextField.setText("Admin");
-        UsernameTextField.setToolTipText("Enter Username");
+        usernameTextField.setText("Admin");
+        usernameTextField.setToolTipText("Enter Username");
 
-        PasswordField.setText("Password");
-        PasswordField.setToolTipText("Enter Password");
+        passwordField.setText("Password");
+        passwordField.setToolTipText("Enter Password");
 
-        LoginButton.setText("Login");
-        LoginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        LoginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        loginButton.setText("Login");
+        loginButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LoginButtonMouseClicked(evt);
+                loginButtonMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout CredentialPanelLayout = new javax.swing.GroupLayout(CredentialPanel);
-        CredentialPanel.setLayout(CredentialPanelLayout);
-        CredentialPanelLayout.setHorizontalGroup(
-            CredentialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CredentialPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
+        loginPanel.setLayout(loginPanelLayout);
+        loginPanelLayout.setHorizontalGroup(
+            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(CredentialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(UsernameTextField)
-                    .addComponent(PasswordField)
-                    .addGroup(CredentialPanelLayout.createSequentialGroup()
-                        .addComponent(LoginButton)
+                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(usernameTextField)
+                    .addComponent(passwordField)
+                    .addGroup(loginPanelLayout.createSequentialGroup()
+                        .addComponent(loginButton)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        CredentialPanelLayout.setVerticalGroup(
-            CredentialPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CredentialPanelLayout.createSequentialGroup()
-                .addComponent(UsernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        loginPanelLayout.setVerticalGroup(
+            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(loginPanelLayout.createSequentialGroup()
+                .addComponent(usernameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(LoginButton))
+                .addComponent(loginButton))
         );
 
-        OperationsPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Operations"));
+        operationPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Operations"));
 
-        OperationsComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employee Registration", "Project Registration", "Project Allocation", "Training Assessment" }));
-        OperationsComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        OperationsComboBox.setEnabled(false);
+        operationComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Employee Registration", "Project Registration", "Project Allocation", "Training Assessment" }));
+        operationComboBox.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        operationComboBox.setEnabled(false);
 
-        OpenButton.setText("Open");
-        OpenButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        OpenButton.setEnabled(false);
-        OpenButton.addMouseListener(new java.awt.event.MouseAdapter() {
+        openButton.setText("Open");
+        openButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        openButton.setEnabled(false);
+        openButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                OpenButtonMouseClicked(evt);
+                openButtonMouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout OperationsPanelLayout = new javax.swing.GroupLayout(OperationsPanel);
-        OperationsPanel.setLayout(OperationsPanelLayout);
-        OperationsPanelLayout.setHorizontalGroup(
-            OperationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OperationsPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout operationPanelLayout = new javax.swing.GroupLayout(operationPanel);
+        operationPanel.setLayout(operationPanelLayout);
+        operationPanelLayout.setHorizontalGroup(
+            operationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(operationPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(OperationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(OperationsComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(OperationsPanelLayout.createSequentialGroup()
-                        .addComponent(OpenButton)
+                .addGroup(operationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(operationComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(operationPanelLayout.createSequentialGroup()
+                        .addComponent(openButton)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        OperationsPanelLayout.setVerticalGroup(
-            OperationsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OperationsPanelLayout.createSequentialGroup()
-                .addComponent(OperationsComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        operationPanelLayout.setVerticalGroup(
+            operationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(operationPanelLayout.createSequentialGroup()
+                .addComponent(operationComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OpenButton))
+                .addComponent(openButton))
         );
 
-        StatusPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        statusPanel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.LOWERED));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jLabel1.setText("CSE - Java Micro Project (2014-18)");
@@ -139,20 +139,20 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout StatusPanelLayout = new javax.swing.GroupLayout(StatusPanel);
-        StatusPanel.setLayout(StatusPanelLayout);
-        StatusPanelLayout.setHorizontalGroup(
-            StatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StatusPanelLayout.createSequentialGroup()
+        javax.swing.GroupLayout statusPanelLayout = new javax.swing.GroupLayout(statusPanel);
+        statusPanel.setLayout(statusPanelLayout);
+        statusPanelLayout.setHorizontalGroup(
+            statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
                 .addComponent(AboutLabel)
                 .addContainerGap())
         );
-        StatusPanelLayout.setVerticalGroup(
-            StatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(StatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+        statusPanelLayout.setVerticalGroup(
+            statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabel1)
                 .addComponent(AboutLabel))
         );
@@ -164,60 +164,48 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CredentialPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(OperationsPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(loginPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(operationPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
-            .addComponent(StatusPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(statusPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(CredentialPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(loginPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OperationsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(operationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(StatusPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(statusPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void LoginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginButtonMouseClicked
-        if(UsernameTextField.getText().equals("Admin") && new String(PasswordField.getPassword()).equals("Password")){
-            UsernameTextField.setEnabled(false);
-            PasswordField.setEnabled(false);
-            OperationsComboBox.setEnabled(true);
-            OpenButton.setEnabled(true);
-        }
-        else{
+    private void loginButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_loginButtonMouseClicked
+        if(usernameTextField.getText().equals("Admin") && new String(passwordField.getPassword()).equals("Password")){
+            usernameTextField.setEnabled(false);
+            passwordField.setEnabled(false);
+            operationComboBox.setEnabled(true);
+            openButton.setEnabled(true);
+        }else{
             JOptionPane.showMessageDialog(null, "Username and Password combination is incorrect.", "Invalid Credential", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_LoginButtonMouseClicked
+    }//GEN-LAST:event_loginButtonMouseClicked
 
     private void AboutLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AboutLabelMouseClicked
         new AboutFrame().setVisible(true);
     }//GEN-LAST:event_AboutLabelMouseClicked
 
-    private void OpenButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OpenButtonMouseClicked
-        switch(OperationsComboBox.getSelectedIndex()){
-            case 0:
-                new EmployeeRegistrationFrame().setVisible(true);
-                break;
-                
-            case 1:
-                new ProjectRegistrationFrame().setVisible(true);
-                break;
-                
-            case 2:
-                new ProjectAllocationFrame().setVisible(true);
-                break;
-                
-            case 3:
-                new TrainingAssessmentFrame().setVisible(true);
-                break;               
+    private void openButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_openButtonMouseClicked
+        switch(operationComboBox.getSelectedIndex()){
+            case 0: new EmployeeRegistrationFrame().setVisible(true); break;              
+            case 1: new ProjectRegistrationFrame().setVisible(true); break;                
+            case 2: new ProjectAllocationFrame().setVisible(true); break;               
+            case 3: new TrainingAssessmentFrame().setVisible(true); break;               
         }
-    }//GEN-LAST:event_OpenButtonMouseClicked
+    }//GEN-LAST:event_openButtonMouseClicked
 
     /**
      * @param args the command line arguments
@@ -245,6 +233,9 @@ public class MainFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         
 
         /* Create and display the form */
@@ -257,14 +248,14 @@ public class MainFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel AboutLabel;
-    private javax.swing.JPanel CredentialPanel;
-    private javax.swing.JButton LoginButton;
-    private javax.swing.JButton OpenButton;
-    private javax.swing.JComboBox<String> OperationsComboBox;
-    private javax.swing.JPanel OperationsPanel;
-    private javax.swing.JPasswordField PasswordField;
-    private javax.swing.JPanel StatusPanel;
-    private javax.swing.JTextField UsernameTextField;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton loginButton;
+    private javax.swing.JPanel loginPanel;
+    private javax.swing.JButton openButton;
+    private javax.swing.JComboBox<String> operationComboBox;
+    private javax.swing.JPanel operationPanel;
+    private javax.swing.JPasswordField passwordField;
+    private javax.swing.JPanel statusPanel;
+    private javax.swing.JTextField usernameTextField;
     // End of variables declaration//GEN-END:variables
 }
